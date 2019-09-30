@@ -5,7 +5,7 @@ import query-string from 'query-string';
 import {} from "./Overzicht";
 import {} from "./Detail";
 
-als key toont detail geen key overzichtpagina
+// als key toont detail geen key overzichtpagina
 if () {
     axios.get("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4bc044ddb757b980e41e9e71ef3aafae");
 } else {
