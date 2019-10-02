@@ -3,6 +3,7 @@ import '../styles/index.scss';
 import Axios from 'axios';
 import queryString from 'query-string';
 import { getOverzicht } from './Overzicht';
+import { getDetail } from './Detail';
 // import {} from "./Overzicht";
 // import {} from "./Detail";
 
@@ -15,7 +16,7 @@ if (parsed.movie) {
     //movie uit url
     var show = document.getElementById("overzicht");
     show.classList.add("toondetail");
-    
+    getDetail(parsed.movie);
 }
 else{
     var show2 = document.getElementById("detail");
