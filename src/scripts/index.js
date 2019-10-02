@@ -21,6 +21,7 @@ else{
     var show2 = document.getElementById("detail");
     show2.classList.add("toonoverzicht");
     getOverzicht();
+    
 }
 
 // if () {
