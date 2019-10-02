@@ -1,3 +1,78 @@
-body{
-    background: hotpink;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+body{
+    font-family: mr-eaves-xl-modern, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color:lightpink;
+    /* background-color: #262d32; */
+    
+}
+
+ol,ul {
+	list-style:none;
+}
+
+
+li{
+    list-style: none;
+  }
+  
+  ul{
+      padding: 0;
+  }
+  
+  body{
+      min-height: 100vh;
+      background-color: black;
+      font-family: 'Lato', sans-serif;
+      background-image: url(/public/bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: whitesmoke;
+  
+  }
+  
+//   .overzicht{
+//       display: none;
+//   }
+  
+  .container__detail{
+      /* height: 80vh; */
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      align-content: stretch;
+      display: none;
+      background-color: black;
+      max-width: 100vw;
+  }
+  
+  
+  .card{
+      border-style: solid;
+      border-color: black;
+      border-width: 0.2rem;
+      background-color: black
+  }
+  
+  .card__single{
+      max-width: 33vw;
+  }
+  
+  .card:hover{
+      cursor: pointer;
+  }
+  
+  .navbar{
+      background-color: black;
+  }
+  
