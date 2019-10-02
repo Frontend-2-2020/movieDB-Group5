@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/index.scss';
-import axios from 'axios';
+import Axios from 'axios';
 import queryString from 'query-string';
-import {} from "./Overzicht";
-import {} from "./Detail";
+import { getOverzicht } from './Overzicht';
+// import {} from "./Overzicht";
+// import {} from "./Detail";
 
 // als key toont detail geen key overzichtpagina
 
@@ -14,10 +15,12 @@ if (parsed.movie) {
     //movie uit url
     var show = document.getElementById("overzicht");
     show.classList.add("toondetail");
+    
 }
 else{
     var show2 = document.getElementById("detail");
     show2.classList.add("toonoverzicht");
+    getOverzicht();
 }
 
 // if () {
