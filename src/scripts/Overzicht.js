@@ -14,36 +14,43 @@ koppel axios aan onze cards
 maak de klikfunctie
 
 */
+
+var movies = [];
 export function getOverzicht() {
     Axios.get("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4bc044ddb757b980e41e9e71ef3aafae")
     .then(function (response) {
+        movies=response.data.results;
         showCards();
         console.log(response);  
-    })
+    });
     
 };
 
-var movies = [];
+
 function showCards() {
+    var html = "";
     for (var i = 0; i < movies.length; i++) {
-        const element = movies[i];
-        // var container = document.querySelector("#overzicht");
-        document.getElementById("overzicht").innerHTML= `<div class="col-md-6 col-lg-3 mt-4">
+        const data = movies[i];
+        html = html + `<div class="col-md-6 col-lg-3 mt-4">
                 <div class="card">
-                    <img src="/public/placeholder.jpg" class="card-img-top" alt="...">
+                    <img src="https://api.themoviedb.org/3/discover/movie?sort_b…ity.desc&api_key=4bc044ddb757b980e41e9e71ef3aafae${data.poster_path}" class="card-img-top" alt="...">
                     <div class="card-body">
-                    <h5 class="card-title">${response.data.title}</h5>
-                    <p class="card-text">score</p>
-                    <p class="card-text">Release date</p>
+                    <h5 class="card-title">${data.title}</h5>
+                    <p class="card-text">${data.vote_average}</p>
+                    <p class="card-text">${data.release_date}</p>
                     </div>
                 </div>
             </div>`
+
+
+
         // container.innerHTML(
             
         // )
         
     }
-    
+    var container = document.querySelector("#overzichtCards");
+        container.innerHTML=html
 };
 
 
