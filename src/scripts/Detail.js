@@ -4,6 +4,7 @@ import Axios from "axios";
 let singlemovie = [];
 let productiehuisLijst = [];
 
+// Call naar DB
 export function getDetail(id) {
     Axios.get("https://api.themoviedb.org/3/movie/"+id+"?api_key=4bc044ddb757b980e41e9e71ef3aafae")
     .then(function (response) {
@@ -15,7 +16,7 @@ export function getDetail(id) {
     
 };
 
-
+// Functie om 1 enkele film te zien
 function detailInfo() {
     let htmlDetail = "";
 
@@ -35,6 +36,7 @@ function detailInfo() {
         containerDetail.innerHTML=htmlDetail
 };
 
+// Functie om lijst te maken van alle productiehuizen.
 function addhouse(){
     let htmlHouse = "";
 
