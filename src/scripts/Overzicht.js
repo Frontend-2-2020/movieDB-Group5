@@ -1,20 +1,6 @@
 import Axios from "axios";
 
 
-// export function initKylian(){
-//     const naam = "Kylian";
-//     console.log(naam);
-// }
-
-// Zorg dat er op de cards kan geklikt worden
-/*
-                ----STAPPENPLAN----
-Haal de ajax op
-koppel axios aan onze cards
-maak de klikfunctie
-
-*/
-
 // haalt data op uit de databank
 var movies = [];
 export function getOverzicht() {
@@ -40,17 +26,12 @@ function showCards() {
                     <h5 class="card-title">${data.title}</h5>
                     <p class="card-text">${data.vote_average}</p>
                     <p class="card-text">${data.release_date}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>`
-
-
-
-        // container.innerHTML(
-            
-        // )
-        
     }
+
     var container = document.querySelector("#overzichtCards");
         container.innerHTML=html
 };
