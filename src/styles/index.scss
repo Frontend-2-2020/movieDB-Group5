@@ -62,7 +62,9 @@ display: none;
       border-style: solid;
       border-color: black;
       border-width: 0.2rem;
-      background-color: black
+      background-color: black;
+      min-height: 65vh;
+
   }
   
   .card__single{

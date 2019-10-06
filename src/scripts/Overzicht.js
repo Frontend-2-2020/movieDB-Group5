@@ -26,7 +26,7 @@ function showCards() {
                     <h5 class="card-title">${data.title}</h5>
                     <p class="card-text">${data.vote_average}</p>
                     <p class="card-text">${data.release_date}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary">Details</a>
                     </div>
                 </div>
             </div>`
