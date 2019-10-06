@@ -21,13 +21,13 @@ function showCards() {
         const data = movies[i];
         html = html + `<div class="col-md-6 col-lg-3 mt-4">
                 <div class="card">
-                    <img src="https://image.tmdb.org/t/p/w154/${data.poster_path}" class="card-img-top" alt="...">
+                    <img src="https://image.tmdb.org/t/p/w342/${data.poster_path}" class="card-img-top" alt="...">
                     <div class="card-body">
                     <h5 class="card-title">${data.title}</h5>
-                    <p class="card-text">${data.vote_average}</p>
-                    <p class="card-text">${data.release_date}</p>
-                    <a href="index.html?movie=${data.id}" class="btn btn-primary">more info...</a>
+                    <p class="card-text card-text--smaller">Score: ${data.vote_average}</p>
+                    <p class="card-text card-text--smaller">Release: ${data.release_date}</p>
                     </div>
+                    <a href="index.html?movie=${data.id}" class="btn btn-dark">more info...</a>
                 </div>
             </div>`
     }

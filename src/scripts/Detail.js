@@ -16,20 +16,20 @@ export function getDetail(id) {
     
 };
 
-// Functie om 1 enkele film te zien
+// Functie om 1 enkele film te zien, met bijhorende HTML render
 function detailInfo() {
     let htmlDetail = "";
 
-    htmlDetail +=   `<div class="card card__single">
-            <img src="https://image.tmdb.org/t/p/w500/${singlemovie.poster_path}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">${singlemovie.title}</h5>
-              <p class="card-text">${singlemovie.vote_average}</p>
-              <p class="card-text">${singlemovie.release_date}</p>
-              <p class="card-text">${singlemovie.overview}</p>
-              <ul id="productieHuizen"></ul>
+    htmlDetail +=  `<div class="card card__single">
+        <div class="card-body more-info">
+            <img src="https://image.tmdb.org/t/p/w342/${singlemovie.poster_path}" class="smallImage"" alt="...">
+            <h3 class="card-title">${singlemovie.title}</h3>
+            <p class="card-text smallertext">Score: ${singlemovie.vote_average}</p>
+            <p class="card-text smallertext">Release: ${singlemovie.release_date}</p>
+            <p class="card-text synopsis">${singlemovie.overview}</p>
+            <ul id="productieHuizen" class="smallertext"></ul>
             </div>
-        </div>
+        <img src="https://image.tmdb.org/t/p/w1280/${singlemovie.backdrop_path}" class="bigImage" alt="...">
     </div>`
 
     const containerDetail = document.querySelector("#detail");
@@ -43,7 +43,7 @@ function addhouse(){
     for (const productiehuisnaam of productiehuisLijst) {
         // console.log(productiehuisnaam.name);
 
-        htmlHouse += `<li class="productiehuis">${productiehuisnaam.name}</li>`
+        htmlHouse += `<li class="productiehuis">- ${productiehuisnaam.name}</li>`
 
         const productie = document.querySelector("#productieHuizen");
             productie.innerHTML=htmlHouse;
